@@ -1,3 +1,8 @@
-# TempVU - Universal temperature sensor interface board
+# PyroVU - Universal temperature sensor interface board
 
-TempVU is an universal temperature sensor module interface board for Sonpakhru board
+PyroVU is an universal temperature sensor module interface board for Sonpakhru board
+
+## User Interface
+![alt text](docs/front-face.jpg "Title")
+
+
