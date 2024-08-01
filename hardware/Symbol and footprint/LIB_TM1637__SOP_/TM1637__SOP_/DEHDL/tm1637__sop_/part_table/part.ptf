@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'TM1637__SOP_'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "ARROW_PART_NUMBER", "ARROW_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "TITAN MICRO ELECTRONICS", "TM1637 (SOP)" (!) = "", "SOIC127P1045X280-20N", "Small Outline Packages", "", "", "", "", "LED Drive Control Special Circuit", "https://www.mcielectronics.cl/website_MCI/static/documents/Datasheet_TM1637.pdf", "2.8 mm"
+END_PART
+
+END.

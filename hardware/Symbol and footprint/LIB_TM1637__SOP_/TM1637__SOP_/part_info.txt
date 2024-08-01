@@ -1,0 +1,9 @@
+Manufacturer=TITAN MICRO ELECTRONICS
+PartNumber=TM1637 (SOP)
+PartCategory=Integrated Circuit
+PackageCategory=Small Outline Packages
+PinCount=20
+Version=1.1
+Released=2018-11-07 10:34:16
+Downloaded=2024-08-01 20:08:08
+3D=Y

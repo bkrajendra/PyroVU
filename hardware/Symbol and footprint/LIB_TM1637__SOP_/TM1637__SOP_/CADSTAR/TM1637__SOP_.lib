@@ -1,0 +1,18 @@
+.TM1637__SOP_ :1 ;LED Drive Control Special Circuit
+SOIC127P1045X280-20N
+*STM IC
+*NGS
+*PLB 1="GND" 2="SEG1/KS1" 3="SEG2/KS2" 4="SEG3/KS3" 5="SEG4/KS4" 6="SEG5/KS5" 7="SEG6/KS6" 8="SEG7/KS7" 9="SEG8/KS8" 10="GRID6" 11="GRID5" 12="GRID4" 13="GRID3" 14="GRID2" 15="GRID1" 16="VDD" 17="DIO" 18="CLK" 19="K1" 20="K2"
+*MXP 20
+*DFN TM1637__SOP_
+~!Manufacturer_Name (TITAN MICRO ELECTRONICS)
+~!Manufacturer_Part_Number (TM1637 (SOP))
+~!Mouser Part Number (-)
+~!Mouser Price/Stock (-)
+~!Arrow Part Number (-)
+~!Arrow Price/Stock (-)
+~!Link Datasheet (https://www.mcielectronics.cl/website_MCI/static/documents/Datasheet_TM1637.pdf)
+~!Height (2.8mm)
+~!3D_Model (TM1637__SOP_)
+TM1637__SOP_
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 9.1!U 10.1!U 20.1!U 19.1!U 18.1!U 17.1!U 16.1!U 15.1!U 14.1!U 13.1!U 12.1!U 11.1!U 
