@@ -18,6 +18,8 @@ bool DataCollection::begin()
     //   delay(10);
     return false;
   }
+
+  // RTD begin
   return true;
 }
 

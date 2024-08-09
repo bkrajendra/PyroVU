@@ -1,17 +1,18 @@
 
 #include <Arduino.h>
 // #include <Adafruit_SPIDevice.h>
-
+#include <TM1637.h>
 
 #include "data_collection.h"
 void findSPI();
-
-
+int mapTemperatureToValue(float temperature);
 // Define your CS and DREADY pins
 #define CS_PIN 10
 #define DREADY_PIN 14
 
 DataCollection tempSensor(CS_PIN, DREADY_PIN);
+
+TM1637 tm(15, 16); // clkPin,  dataPin
 
 void setup()
 {
@@ -30,11 +31,14 @@ void setup()
   Serial.println(tempSensor.readTemperature());
 
   // maxthermo.setConversionMode(MAX31856_CONTINUOUS);
-
+  tm.begin();
+  tm.setBrightnessPercent(70); // Display's brightness value between 0 and 100 percent
+  tm.display("OK")->scrollLeft(1000);
 }
 
 void loop()
 {
+  tm.clearScreen();
   float temperature = tempSensor.readTemperature();
   if (isnan(temperature))
   {
@@ -44,6 +48,11 @@ void loop()
   {
     Serial.print(">Temperature: ");
     Serial.println(temperature);
+    int value = mapTemperatureToValue(temperature);
+    Serial.print(">Value: ");
+    Serial.println(value);
+    tm.setBrightnessPercent(value);
+    tm.display(temperature);
   }
 
   delay(2000);
@@ -97,3 +106,20 @@ void findSPI() // pass by ref
 //   }
 //   Serial.println(maxthermo.readThermocoupleTemperature());
 // }
+
+int mapTemperatureToValue(float temperature)
+{
+  // Ensure temperature is within the expected range
+  if (temperature < 27.0)
+    temperature = 27.0;
+  if (temperature > 34.0)
+    temperature = 34.0;
+
+  // Map the temperature to a value from 10 to 100
+  int value = (int)((temperature - 27.0) / 7.0 * 90.0) + 10;
+
+  // Round to the nearest multiple of 10
+  value = (value + 5) / 10 * 10;
+
+  return value;
+}
